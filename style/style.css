@@ -1,0 +1,46 @@
+ul{
+    display: flex;
+    column-gap: 25px;
+}
+li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+}
+
+li a:after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: transparent;
+    transition: 1s ;
+}
+
+li a:hover::after{
+    background: red;
+    width: 100%;
+
+}
+
+li a::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background: transparent;
+    transition: 1s ;
+}
+
+li a:hover::before{
+    background: red;
+    width: 100%;
+}
